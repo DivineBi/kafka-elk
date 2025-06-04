@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class MessageConsumer {
 
-    @KafkaListener(topics = "xxxxx", groupId = "${spring.kafka.consumer.group-id}")
+    @KafkaListener(topics = "${app.kafka.topic}", groupId = "${spring.kafka.consumer.group-id}")
     public void listen(String message) {
         log.info("Message receive : {}", message);
     }
