@@ -25,7 +25,7 @@ public class ScheduledExchangePublisher {
             ExchangeRateService exchangeRateService,
             MessageProducer messageProducer,
             ObjectMapper objectMapper,
-            @Value("${kafka.topic.name}") String topic
+            @Value("${app.kafka.topic}") String topic
     ) {
         this.exchangeRateService = exchangeRateService;
         this.messageProducer = messageProducer;
